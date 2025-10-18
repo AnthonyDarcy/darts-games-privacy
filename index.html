@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité / Privacy Policy - Darts Games</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333; }
+        h1, h2 { color: #2c3e50; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lang-switch { margin-bottom: 20px; }
+        .lang-switch button { margin-right: 10px; padding: 5px 10px; cursor: pointer; }
+        .content { display: none; }
+        .content.active { display: block; }
+    </style>
+    <script>
+        function showLang(lang) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+        }
+        window.onload = () => showLang('fr');
+    </script>
+</head>
+<body>
+
+    <div class="lang-switch">
+        <button onclick="showLang('fr')">FR</button>
+        <button onclick="showLang('en')">EN</button>
+    </div>
+
+    <!-- French Section -->
+    <div id="fr" class="content">
+        <h1>Politique de Confidentialité - Darts Games</h1>
+        <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs. En utilisant l'application, vous acceptez les pratiques décrites dans cette politique.</p>
+
+        <h2>Données collectées</h2>
+        <p>Nous ne collectons aucune information personnelle identifiable, telles que nom, adresse e-mail ou numéro de téléphone.</p>
+        <p>L'application peut collecter des informations anonymes sur l'utilisation et les erreurs via des services tels que Firebase Analytics pour améliorer l'expérience utilisateur.</p>
+
+        <h2>Utilisation des données</h2>
+        <ul>
+            <li>Améliorer la stabilité et les performances de l'application</li>
+            <li>Comprendre comment l'application est utilisée afin de proposer de nouvelles fonctionnalités</li>
+        </ul>
+
+        <h2>Partage des données</h2>
+        <p>Nous ne partageons pas vos données personnelles avec des tiers.</p>
+        <p>Certaines données anonymisées peuvent être stockées sur les serveurs de Google via Firebase pour l'analyse statistique.</p>
+
+        <h2>Sécurité</h2>
+        <p>Nous prenons des mesures de sécurité raisonnables pour protéger vos informations contre l'accès, l'altération ou la divulgation non autorisée.</p>
+
+        <h2>Droits de l’utilisateur</h2>
+        <p>Les utilisateurs peuvent à tout moment demander la suppression des données collectées anonymement via l'application.</p>
+
+        <h2>Modifications de la politique</h2>
+        <p>Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Les modifications seront publiées sur cette page.</p>
+
+        <h2>Contact</h2>
+        <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à : <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+    </div>
+
+    <!-- English Section -->
+    <div id="en" class="content">
+        <h1>Privacy Policy - Darts Games</h1>
+        <p>This Privacy Policy describes how the <strong>Darts Games</strong> app collects, uses, and protects user information. By using the app, you agree to the practices described in this policy.</p>
+
+        <h2>Data Collection</h2>
+        <p>We do not collect any personally identifiable information, such as name, email address, or phone number.</p>
+        <p>The app may collect anonymous usage and error information via services such as Firebase Analytics to improve the user experience.</p>
+
+        <h2>Use of Data</h2>
+        <ul>
+            <li>Improve app stability and performance</li>
+            <li>Understand how the app is used to provide new features</li>
+        </ul>
+
+        <h2>Data Sharing</h2>
+        <p>We do not share your personal data with third parties.</p>
+        <p>Some anonymized data may be stored on Google servers via Firebase for statistical analysis.</p>
+
+        <h2>Security</h2>
+        <p>We take reasonable security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
+
+        <h2>User Rights</h2>
+        <p>Users can request the deletion of anonymously collected data at any time via the app.</p>
+
+        <h2>Policy Updates</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
+
+        <h2>Contact</h2>
+        <p>For any questions regarding this privacy policy, you can contact us at: <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+    </div>
+
+</body>
+</html>
