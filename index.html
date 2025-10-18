@@ -3,162 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité / Privacy Policy - Darts Games</title>
+    <title>Privacy Policy - Darts Games</title>
     <style>
-        /* --- Général --- */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f6f8;
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            margin: 15px 0;
-        }
-        nav button {
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.2s;
-        }
-        nav button:hover {
-            background-color: #2980b9;
+            box-sizing: border-box;
         }
 
-        /* --- Contenu --- */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+
         .content {
             display: none;
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            padding: 25px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeIn 0.5s ease;
         }
-        .content.active { display: block; }
+
+        .content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
         h2 {
-            color: #2c3e50;
-            margin-top: 25px;
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        ul { margin-left: 20px; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        .icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+        }
 
         footer {
             text-align: center;
-            margin: 30px 0 10px 0;
-            font-size: 0.9em;
-            color: #777;
+            color: white;
+            padding: 30px 20px;
+            font-size: 0.95em;
+            opacity: 0.9;
         }
 
-        @media(max-width: 600px){
-            body { padding: 10px; }
-            .content { padding: 20px; }
-            nav { flex-direction: column; }
-            nav button { margin: 5px 0; }
+        @media(max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 30px 25px;
+                border-radius: 15px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .lang-switch {
+                gap: 10px;
+            }
+
+            .lang-btn {
+                padding: 10px 25px;
+                font-size: 0.95em;
+            }
         }
     </style>
-    <script>
-        function showLang(lang) {
-            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-            document.getElementById(lang).classList.add('active');
-        }
-        window.onload = () => showLang('fr');
-    </script>
 </head>
 <body>
-    <header>
-        <h1>Darts Games - Politique de Confidentialité / Privacy Policy</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>🎯 Darts Games</h1>
+            <p class="subtitle">Politique de Confidentialité / Privacy Policy</p>
+        </header>
 
-    <nav>
-        <button onclick="showLang('fr')">FR</button>
-        <button onclick="showLang('en')">EN</button>
-    </nav>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('fr')">🇫🇷 Français</button>
+            <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+        </div>
 
-    <!-- French Section -->
-    <div id="fr" class="content">
-        <h2>Introduction</h2>
-        <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs. En utilisant l'application, vous acceptez les pratiques décrites dans cette politique.</p>
+        <!-- Version Française -->
+        <div id="fr" class="content active">
+            <div class="section">
+                <h2><span class="icon">📋</span> Introduction</h2>
+                <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs. En utilisant l'application, vous acceptez les pratiques décrites dans cette politique.</p>
+            </div>
 
-        <h2>Données collectées</h2>
-        <p>Nous ne collectons aucune information personnelle identifiable, telles que nom, adresse e-mail ou numéro de téléphone.</p>
-        <p>L'application peut collecter des informations anonymes sur l'utilisation et les erreurs via des services tels que Firebase Analytics pour améliorer l'expérience utilisateur.</p>
+            <div class="section">
+                <h2><span class="icon">📊</span> Données collectées</h2>
+                <p>Nous ne collectons aucune information personnelle identifiable, telles que nom, adresse e-mail ou numéro de téléphone.</p>
+                <p>L'application peut collecter des informations anonymes sur l'utilisation et les erreurs via des services tels que Firebase Analytics pour améliorer l'expérience utilisateur.</p>
+            </div>
 
-        <h2>Utilisation des données</h2>
-        <ul>
-            <li>Améliorer la stabilité et les performances de l'application</li>
-            <li>Comprendre comment l'application est utilisée afin de proposer de nouvelles fonctionnalités</li>
-        </ul>
+            <div class="section">
+                <h2><span class="icon">⚙️</span> Utilisation des données</h2>
+                <ul>
+                    <li>Améliorer la stabilité et les performances de l'application</li>
+                    <li>Comprendre comment l'application est utilisée afin de proposer de nouvelles fonctionnalités</li>
+                </ul>
+            </div>
 
-        <h2>Partage des données</h2>
-        <p>Nous ne partageons pas vos données personnelles avec des tiers.</p>
-        <p>Certaines données anonymisées peuvent être stockées sur les serveurs de Google via Firebase pour l'analyse statistique.</p>
+            <div class="section">
+                <h2><span class="icon">🔄</span> Partage des données</h2>
+                <p>Nous ne partageons pas vos données personnelles avec des tiers.</p>
+                <p>Certaines données anonymisées peuvent être stockées sur les serveurs de Google via Firebase pour l'analyse statistique.</p>
+            </div>
 
-        <h2>Sécurité</h2>
-        <p>Nous prenons des mesures de sécurité raisonnables pour protéger vos informations contre l'accès, l'altération ou la divulgation non autorisée.</p>
+            <div class="section">
+                <h2><span class="icon">🔒</span> Sécurité</h2>
+                <p>Nous prenons des mesures de sécurité raisonnables pour protéger vos informations contre l'accès, l'altération ou la divulgation non autorisée.</p>
+            </div>
 
-        <h2>Droits de l’utilisateur</h2>
-        <p>Les utilisateurs peuvent à tout moment demander la suppression des données collectées anonymement via l'application.</p>
+            <div class="section">
+                <h2><span class="icon">👤</span> Droits de l'utilisateur</h2>
+                <p>Les utilisateurs peuvent à tout moment demander la suppression des données collectées anonymement via l'application.</p>
+            </div>
 
-        <h2>Modifications de la politique</h2>
-        <p>Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Les modifications seront publiées sur cette page.</p>
+            <div class="section">
+                <h2><span class="icon">🔄</span> Modifications de la politique</h2>
+                <p>Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Les modifications seront publiées sur cette page.</p>
+            </div>
 
-        <h2>Contact</h2>
-        <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à : <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+            <div class="section">
+                <h2><span class="icon">✉️</span> Contact</h2>
+                <div class="contact-box">
+                    <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à :</p>
+                    <p><a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div id="en" class="content">
+            <div class="section">
+                <h2><span class="icon">📋</span> Introduction</h2>
+                <p>This Privacy Policy describes how the <strong>Darts Games</strong> app collects, uses, and protects user information. By using the app, you agree to the practices described in this policy.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">📊</span> Data Collection</h2>
+                <p>We do not collect any personally identifiable information, such as name, email address, or phone number.</p>
+                <p>The app may collect anonymous usage and error information via services such as Firebase Analytics to improve the user experience.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">⚙️</span> Use of Data</h2>
+                <ul>
+                    <li>Improve app stability and performance</li>
+                    <li>Understand how the app is used to provide new features</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🔄</span> Data Sharing</h2>
+                <p>We do not share your personal data with third parties.</p>
+                <p>Some anonymized data may be stored on Google servers via Firebase for statistical analysis.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🔒</span> Security</h2>
+                <p>We take reasonable security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">👤</span> User Rights</h2>
+                <p>Users can request the deletion of anonymously collected data at any time via the app.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🔄</span> Policy Updates</h2>
+                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">✉️</span> Contact</h2>
+                <div class="contact-box">
+                    <p>For any questions regarding this privacy policy, you can contact us at:</p>
+                    <p><a href="mailto:support@dartsgames.com">darts.games.help@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 Darts Games - Tous droits réservés / All rights reserved
+        </footer>
     </div>
 
-    <!-- English Section -->
-    <div id="en" class="content">
-        <h2>Introduction</h2>
-        <p>This Privacy Policy describes how the <strong>Darts Games</strong> app collects, uses, and protects user information. By using the app, you agree to the practices described in this policy.</p>
-
-        <h2>Data Collection</h2>
-        <p>We do not collect any personally identifiable information, such as name, email address, or phone number.</p>
-        <p>The app may collect anonymous usage and error information via services such as Firebase Analytics to improve the user experience.</p>
-
-        <h2>Use of Data</h2>
-        <ul>
-            <li>Improve app stability and performance</li>
-            <li>Understand how the app is used to provide new features</li>
-        </ul>
-
-        <h2>Data Sharing</h2>
-        <p>We do not share your personal data with third parties.</p>
-        <p>Some anonymized data may be stored on Google servers via Firebase for statistical analysis.</p>
-
-        <h2>Security</h2>
-        <p>We take reasonable security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
-
-        <h2>User Rights</h2>
-        <p>Users can request the deletion of anonymously collected data at any time via the app.</p>
-
-        <h2>Policy Updates</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
-
-        <h2>Contact</h2>
-        <p>For any questions regarding this privacy policy, you can contact us at: <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
-    </div>
-
-    <footer>
-        &copy; 2025 Darts Games
-    </footer>
+    <script>
+        function switchLang(lang) {
+            const contents = document.querySelectorAll('.content');
+            const buttons = document.querySelectorAll('.lang-btn');
+            
+            contents.forEach(c => c.classList.remove('active'));
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(lang).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
