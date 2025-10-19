@@ -1,347 +1,229 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Darts Games</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darts Games - Politique de Confidentialité / Privacy Policy</title>
+  <style>
+    /* ----- Base ----- */
+    :root {
+      --primary: #3498db;
+      --secondary: #2c3e50;
+      --bg: #f4f6f8;
+      --text: #333;
+    }
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+    /* ----- Header ----- */
+    header {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 0.5px;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    /* ----- Nav Lang ----- */
+    nav {
+      text-align: center;
+      margin: 15px 0;
+    }
+    nav button {
+      background-color: var(--primary);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #2176b5;
+      transform: translateY(-2px);
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            color: white;
-        }
+    /* ----- Content Container ----- */
+    .content {
+      display: none;
+      max-width: 850px;
+      margin: 20px auto 50px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: fadeIn 0.7s ease both;
+    }
+    .content.active {
+      display: block;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
+    /* ----- Section collapsible ----- */
+    details {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px 0;
+      background-color: #fafafa;
+      transition: all 0.3s ease;
+    }
+    summary {
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      background-color: #f0f4f7;
+      border-radius: 8px;
+      list-style: none;
+    }
+    details[open] summary {
+      background-color: #e8f2fc;
+      color: var(--primary);
+    }
+    details p, details ul {
+      padding: 0 16px 12px 16px;
+      margin: 0;
+    }
 
-        .subtitle {
-            font-size: 1.1em;
-            opacity: 0.95;
-        }
+    /* ----- Animations ----- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .lang-switch {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-        }
+    /* ----- Footer ----- */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #777;
+      background-color: #f0f4f7;
+    }
 
-        .lang-btn {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 12px 30px;
-            font-size: 1em;
-            font-weight: 600;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    @media(max-width: 600px) {
+      .content { padding: 20px; }
+      summary { font-size: 1em; }
+      nav button { width: 90%; margin: 5px auto; display: block; }
+    }
+  </style>
 
-        .lang-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-
-        .lang-btn.active {
-            background: white;
-            color: #667eea;
-            border-color: white;
-        }
-
-        .content {
-            display: none;
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: fadeIn 0.5s ease;
-        }
-
-        .content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section:last-child {
-            margin-bottom: 0;
-        }
-
-        h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2em;
-        }
-
-        p {
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            font-size: 1.05em;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 10px;
-            font-size: 1.05em;
-        }
-
-        strong {
-            color: #667eea;
-            font-weight: 600;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .contact-box a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            padding: 30px 20px;
-            font-size: 0.95em;
-            opacity: 0.9;
-        }
-
-        @media(max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .content {
-                padding: 30px 25px;
-                border-radius: 15px;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-
-            .lang-switch {
-                gap: 10px;
-            }
-
-            .lang-btn {
-                padding: 10px 25px;
-                font-size: 0.95em;
-            }
-        }
-    </style>
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onload = () => showLang('fr');
+  </script>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>🎯 Darts Games</h1>
-            <p class="subtitle">Politique de Confidentialité / Privacy Policy</p>
-        </header>
+  <header>
+    <h1>Darts Games</h1>
+    <p>Politique de Confidentialité / Privacy Policy</p>
+  </header>
 
-        <div class="lang-switch">
-            <button class="lang-btn active" onclick="switchLang('fr')">🇫🇷 Français</button>
-            <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
-        </div>
+  <nav>
+    <button onclick="showLang('fr')">🇫🇷 Français</button>
+    <button onclick="showLang('en')">🇬🇧 English</button>
+  </nav>
 
-        <!-- Version Française -->
-        <div id="fr" class="content active">
-            <div class="section">
-                <h2><span class="icon">📋</span> Introduction</h2>
-                <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs. En utilisant l'application, vous acceptez les pratiques décrites dans cette politique.</p>
-            </div>
+  <!-- 🔹 Version FR -->
+  <section id="fr" class="content active">
+    <details open>
+      <summary>Introduction</summary>
+      <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">📊</span> Données collectées</h2>
-                <p>Nous ne collectons aucune information personnelle identifiable, telles que nom, adresse e-mail ou numéro de téléphone.</p>
-                <p>L'application peut collecter des informations anonymes sur l'utilisation et les erreurs via des services tels que Firebase Analytics pour améliorer l'expérience utilisateur.</p>
-            </div>
+    <details>
+      <summary>Données collectées</summary>
+      <p>Nous ne collectons aucune donnée personnelle identifiable. Seules des informations anonymes d'utilisation ou de performance peuvent être collectées (par ex. via Firebase).</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">⚙️</span> Utilisation des données</h2>
-                <ul>
-                    <li>Améliorer la stabilité et les performances de l'application</li>
-                    <li>Comprendre comment l'application est utilisée afin de proposer de nouvelles fonctionnalités</li>
-                </ul>
-            </div>
+    <details>
+      <summary>Utilisation des données</summary>
+      <ul>
+        <li>Amélioration de la stabilité et des performances</li>
+        <li>Compréhension de l’utilisation de l’application</li>
+      </ul>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">🔄</span> Partage des données</h2>
-                <p>Nous ne partageons pas vos données personnelles avec des tiers.</p>
-                <p>Certaines données anonymisées peuvent être stockées sur les serveurs de Google via Firebase pour l'analyse statistique.</p>
-            </div>
+    <details>
+      <summary>Partage des données</summary>
+      <p>Aucune donnée personnelle n’est partagée. Les données anonymes peuvent être utilisées pour l’analyse statistique.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">🔒</span> Sécurité</h2>
-                <p>Nous prenons des mesures de sécurité raisonnables pour protéger vos informations contre l'accès, l'altération ou la divulgation non autorisée.</p>
-            </div>
+    <details>
+      <summary>Sécurité</summary>
+      <p>Nous appliquons des mesures raisonnables pour protéger vos informations contre tout accès non autorisé.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">👤</span> Droits de l'utilisateur</h2>
-                <p>Les utilisateurs peuvent à tout moment demander la suppression des données collectées anonymement via l'application.</p>
-            </div>
+    <details>
+      <summary>Modifications de la politique</summary>
+      <p>Nous pouvons modifier cette politique à tout moment. Les changements seront visibles sur cette page.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">🔄</span> Modifications de la politique</h2>
-                <p>Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Les modifications seront publiées sur cette page.</p>
-            </div>
+    <details>
+      <summary>Contact</summary>
+      <p>Pour toute question : <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+    </details>
+  </section>
 
-            <div class="section">
-                <h2><span class="icon">✉️</span> Contact</h2>
-                <div class="contact-box">
-                    <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à :</p>
-                    <p><a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
-                </div>
-            </div>
-        </div>
+  <!-- 🔹 Version EN -->
+  <section id="en" class="content">
+    <details open>
+      <summary>Introduction</summary>
+      <p>This Privacy Policy explains how <strong>Darts Games</strong> collects, uses, and protects user data.</p>
+    </details>
 
-        <!-- English Version -->
-        <div id="en" class="content">
-            <div class="section">
-                <h2><span class="icon">📋</span> Introduction</h2>
-                <p>This Privacy Policy describes how the <strong>Darts Games</strong> app collects, uses, and protects user information. By using the app, you agree to the practices described in this policy.</p>
-            </div>
+    <details>
+      <summary>Data Collection</summary>
+      <p>We do not collect any personally identifiable data. Only anonymous usage or performance data may be gathered (e.g. via Firebase).</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">📊</span> Data Collection</h2>
-                <p>We do not collect any personally identifiable information, such as name, email address, or phone number.</p>
-                <p>The app may collect anonymous usage and error information via services such as Firebase Analytics to improve the user experience.</p>
-            </div>
+    <details>
+      <summary>Use of Data</summary>
+      <ul>
+        <li>Improve app stability and performance</li>
+        <li>Understand app usage for future features</li>
+      </ul>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">⚙️</span> Use of Data</h2>
-                <ul>
-                    <li>Improve app stability and performance</li>
-                    <li>Understand how the app is used to provide new features</li>
-                </ul>
-            </div>
+    <details>
+      <summary>Data Sharing</summary>
+      <p>No personal data is shared. Anonymous data may be used for statistical purposes.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">🔄</span> Data Sharing</h2>
-                <p>We do not share your personal data with third parties.</p>
-                <p>Some anonymized data may be stored on Google servers via Firebase for statistical analysis.</p>
-            </div>
+    <details>
+      <summary>Security</summary>
+      <p>We take reasonable steps to protect your data against unauthorized access or disclosure.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">🔒</span> Security</h2>
-                <p>We take reasonable security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
-            </div>
+    <details>
+      <summary>Policy Updates</summary>
+      <p>We may update this policy occasionally. Any changes will appear on this page.</p>
+    </details>
 
-            <div class="section">
-                <h2><span class="icon">👤</span> User Rights</h2>
-                <p>Users can request the deletion of anonymously collected data at any time via the app.</p>
-            </div>
+    <details>
+      <summary>Contact</summary>
+      <p>For any inquiries: <a href="mailto:darts.games.help@gmail.com">darts.games.help@gmail.com</a></p>
+    </details>
+  </section>
 
-            <div class="section">
-                <h2><span class="icon">🔄</span> Policy Updates</h2>
-                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
-            </div>
-
-            <div class="section">
-                <h2><span class="icon">✉️</span> Contact</h2>
-                <div class="contact-box">
-                    <p>For any questions regarding this privacy policy, you can contact us at:</p>
-                    <p><a href="mailto:support@dartsgames.com">darts.games.help@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            &copy; 2025 Darts Games - Tous droits réservés / All rights reserved
-        </footer>
-    </div>
-
-    <script>
-        function switchLang(lang) {
-            const contents = document.querySelectorAll('.content');
-            const buttons = document.querySelectorAll('.lang-btn');
-            
-            contents.forEach(c => c.classList.remove('active'));
-            buttons.forEach(b => b.classList.remove('active'));
-            
-            document.getElementById(lang).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
+  <footer>
+    &copy; 2025 Darts Games — All rights reserved.
+  </footer>
 </body>
 </html>
