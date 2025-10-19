@@ -1,50 +1,229 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Darts Games</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darts Games - Politique de Confidentialité / Privacy Policy</title>
+  <style>
+    /* ----- Base ----- */
+    :root {
+      --primary: #3498db;
+      --secondary: #2c3e50;
+      --bg: #f4f6f8;
+      --text: #333;
+    }
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ----- Header ----- */
+    header {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 0.5px;
+    }
+
+    /* ----- Nav Lang ----- */
+    nav {
+      text-align: center;
+      margin: 15px 0;
+    }
+    nav button {
+      background-color: var(--primary);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #2176b5;
+      transform: translateY(-2px);
+    }
+
+    /* ----- Content Container ----- */
+    .content {
+      display: none;
+      max-width: 850px;
+      margin: 20px auto 50px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: fadeIn 0.7s ease both;
+    }
+    .content.active {
+      display: block;
+    }
+
+    /* ----- Section collapsible ----- */
+    details {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px 0;
+      background-color: #fafafa;
+      transition: all 0.3s ease;
+    }
+    summary {
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      background-color: #f0f4f7;
+      border-radius: 8px;
+      list-style: none;
+    }
+    details[open] summary {
+      background-color: #e8f2fc;
+      color: var(--primary);
+    }
+    details p, details ul {
+      padding: 0 16px 12px 16px;
+      margin: 0;
+    }
+
+    /* ----- Animations ----- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- Footer ----- */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #777;
+      background-color: #f0f4f7;
+    }
+
+    @media(max-width: 600px) {
+      .content { padding: 20px; }
+      summary { font-size: 1em; }
+      nav button { width: 90%; margin: 5px auto; display: block; }
+    }
+  </style>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onload = () => showLang('fr');
+  </script>
 </head>
+
 <body>
-    <h1>Politique de Confidentialité - Darts Games</h1>
+  <header>
+    <h1>Darts Games</h1>
+    <p>Politique de Confidentialité / Privacy Policy</p>
+  </header>
 
-    <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs. En utilisant l'application, vous acceptez les pratiques décrites dans cette politique.</p>
+  <nav>
+    <button onclick="showLang('fr')">🇫🇷 Français</button>
+    <button onclick="showLang('en')">🇬🇧 English</button>
+  </nav>
 
-    <h2>Données collectées</h2>
-    <p>Nous ne collectons aucune information personnelle identifiable, telles que nom, adresse e-mail ou numéro de téléphone.</p>
-    <p>L'application peut collecter des informations anonymes sur l'utilisation et les erreurs via des services tels que Firebase Analytics pour améliorer l'expérience utilisateur.</p>
+  <!-- 🔹 Version FR -->
+  <section id="fr" class="content active">
+    <details open>
+      <summary>Introduction</summary>
+      <p>Cette Politique de Confidentialité décrit comment l'application <strong>Darts Games</strong> collecte, utilise et protège les informations des utilisateurs.</p>
+    </details>
 
-    <h2>Utilisation des données</h2>
-    <p>Les informations collectées sont uniquement utilisées pour :</p>
-    <ul>
-        <li>Améliorer la stabilité et les performances de l'application</li>
-        <li>Comprendre comment l'application est utilisée afin de proposer de nouvelles fonctionnalités</li>
-    </ul>
+    <details>
+      <summary>Données collectées</summary>
+      <p>Nous ne collectons aucune donnée personnelle identifiable. Seules des informations anonymes d'utilisation ou de performance peuvent être collectées (par ex. via Firebase).</p>
+    </details>
 
-    <h2>Partage des données</h2>
-    <p>Nous ne partageons pas vos données personnelles avec des tiers.</p>
-    <p>Certaines données anonymisées peuvent être stockées sur les serveurs de Google via Firebase pour l'analyse statistique.</p>
+    <details>
+      <summary>Utilisation des données</summary>
+      <ul>
+        <li>Amélioration de la stabilité et des performances</li>
+        <li>Compréhension de l’utilisation de l’application</li>
+      </ul>
+    </details>
 
-    <h2>Sécurité</h2>
-    <p>Nous prenons des mesures de sécurité raisonnables pour protéger vos informations contre l'accès, l'altération ou la divulgation non autorisée.</p>
+    <details>
+      <summary>Partage des données</summary>
+      <p>Aucune donnée personnelle n’est partagée. Les données anonymes peuvent être utilisées pour l’analyse statistique.</p>
+    </details>
 
-    <h2>Droits de l’utilisateur</h2>
-    <p>Les utilisateurs peuvent à tout moment demander la suppression des données collectées anonymement via l'application.</p>
+    <details>
+      <summary>Sécurité</summary>
+      <p>Nous appliquons des mesures raisonnables pour protéger vos informations contre tout accès non autorisé.</p>
+    </details>
 
-    <h2>Modifications de la politique</h2>
-    <p>Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Les modifications seront publiées sur cette page.</p>
+    <details>
+      <summary>Modifications de la politique</summary>
+      <p>Nous pouvons modifier cette politique à tout moment. Les changements seront visibles sur cette page.</p>
+    </details>
 
-    <h2>Contact</h2>
-    <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à : <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+    <details>
+      <summary>Contact</summary>
+      <p>Pour toute question : <a href="mailto:support@dartsgames.com">support@dartsgames.com</a></p>
+    </details>
+  </section>
 
-    <footer style="margin-top: 40px; font-size: 0.9em; color: #777;">
-        &copy; 2025 Darts Games
-    </footer>
+  <!-- 🔹 Version EN -->
+  <section id="en" class="content">
+    <details open>
+      <summary>Introduction</summary>
+      <p>This Privacy Policy explains how <strong>Darts Games</strong> collects, uses, and protects user data.</p>
+    </details>
+
+    <details>
+      <summary>Data Collection</summary>
+      <p>We do not collect any personally identifiable data. Only anonymous usage or performance data may be gathered (e.g. via Firebase).</p>
+    </details>
+
+    <details>
+      <summary>Use of Data</summary>
+      <ul>
+        <li>Improve app stability and performance</li>
+        <li>Understand app usage for future features</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Data Sharing</summary>
+      <p>No personal data is shared. Anonymous data may be used for statistical purposes.</p>
+    </details>
+
+    <details>
+      <summary>Security</summary>
+      <p>We take reasonable steps to protect your data against unauthorized access or disclosure.</p>
+    </details>
+
+    <details>
+      <summary>Policy Updates</summary>
+      <p>We may update this policy occasionally. Any changes will appear on this page.</p>
+    </details>
+
+    <details>
+      <summary>Contact</summary>
+      <p>For any inquiries: <a href="mailto:darts.games.help@gmail.com">darts.games.help@gmail.com</a></p>
+    </details>
+  </section>
+
+  <footer>
+    &copy; 2025 Darts Games — All rights reserved.
+  </footer>
 </body>
 </html>
