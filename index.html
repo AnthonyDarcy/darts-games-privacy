@@ -162,16 +162,29 @@
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             padding: 25px;
             border-radius: 15px;
-            border-left: 5px solid #4caf50;
+            border-left: 5px solid #2196f3;
             margin: 20px 0;
         }
 
         .highlight-box p {
-            color: #2e7d32;
+            color: #1565c0;
             font-weight: 600;
+            margin: 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            margin: 15px 0;
+        }
+
+        .info-box p {
+            color: #e65100;
             margin: 0;
         }
 
@@ -241,57 +254,92 @@
         <!-- Version Française -->
         <div id="fr" class="content active">
             <div class="section">
-                <h2><span class="icon">🛡️</span> Votre vie privée est respectée</h2>
+                <h2><span class="icon">🛡️</span> Votre vie privée est importante</h2>
                 <div class="highlight-box">
-                    <p>✨ Nous ne collectons AUCUNE donnée personnelle. Nous ne suivons pas votre activité. Nous ne partageons rien avec des tiers.</p>
+                    <p>✨ Nous collectons uniquement des données anonymes pour améliorer l'application. Aucune donnée personnelle identifiable n'est collectée.</p>
                 </div>
-                <p>Cette politique de confidentialité décrit comment l'application <strong>Darts Games</strong> traite (ou plutôt, ne traite pas) vos informations personnelles.</p>
+                <p>Cette politique de confidentialité décrit comment l'application <strong>Darts Games</strong> traite vos informations.</p>
+                <p><strong>Date de dernière mise à jour :</strong> Octobre 2025</p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">🚫</span> Aucune collecte de données</h2>
-                <p><strong>Darts Games</strong> ne collecte, ne stocke et ne traite aucune information personnelle ou donnée d'utilisation.</p>
-                <p>Nous ne collectons pas :</p>
+                <h2><span class="icon">📊</span> Données collectées</h2>
+                <p><strong>Darts Games</strong> utilise <strong>Firebase Analytics</strong> pour collecter des données anonymes d'utilisation afin d'améliorer l'application.</p>
+                
+                <p><strong>Données collectées automatiquement :</strong></p>
                 <ul>
-                    <li>Nom, adresse e-mail ou numéro de téléphone</li>
-                    <li>Localisation ou données GPS</li>
-                    <li>Statistiques d'utilisation ou comportement dans l'application</li>
-                    <li>Données de l'appareil ou identifiants</li>
-                    <li>Cookies ou technologies de suivi</li>
+                    <li><strong>Données d'utilisation :</strong> interactions avec l'application, fonctionnalités utilisées, temps passé, sessions</li>
+                    <li><strong>Données techniques :</strong> modèle de l'appareil, version du système d'exploitation, langue, pays approximatif (basé sur l'adresse IP)</li>
+                    <li><strong>Données de performance :</strong> plantages éventuels, erreurs techniques</li>
+                    <li><strong>Identifiant anonyme :</strong> un identifiant unique généré par Firebase (non lié à votre identité)</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>Important :</strong> Nous ne collectons PAS de nom, adresse e-mail, numéro de téléphone, localisation GPS précise ou toute autre donnée permettant de vous identifier personnellement.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🎯</span> Finalité de la collecte</h2>
+                <p>Les données sont collectées uniquement pour :</p>
+                <ul>
+                    <li>Comprendre comment l'application est utilisée</li>
+                    <li>Améliorer les fonctionnalités et l'expérience utilisateur</li>
+                    <li>Identifier et corriger les bugs techniques</li>
+                    <li>Optimiser les performances de l'application</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2><span class="icon">📱</span> Stockage local uniquement</h2>
-                <p>Toutes les données de jeu (scores, paramètres, préférences) sont stockées localement sur votre appareil. Ces données ne quittent jamais votre appareil et ne sont pas synchronisées avec des serveurs externes.</p>
+                <h2><span class="icon">📱</span> Stockage des données</h2>
+                <p><strong>Données locales :</strong> Vos scores, paramètres et préférences de jeu sont stockés localement sur votre appareil et ne sont jamais transmis à nos serveurs.</p>
+                <p><strong>Données Analytics :</strong> Les données anonymes d'utilisation sont transmises de manière sécurisée aux serveurs de Google Firebase et sont conservées selon les paramètres Firebase (généralement 2 mois).</p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">🔒</span> Aucun partage de données</h2>
-                <p>Puisque nous ne collectons aucune donnée, nous n'avons rien à partager avec des tiers, des annonceurs ou des partenaires.</p>
+                <h2><span class="icon">🔒</span> Partage des données</h2>
+                <p><strong>Google Firebase :</strong> Les données anonymes sont traitées par Google Firebase Analytics conformément à leur politique de confidentialité.</p>
+                <p><strong>Aucun tiers :</strong> Nous ne vendons ni ne partageons vos données avec des annonceurs ou d'autres tiers.</p>
+                <p>Pour en savoir plus sur Firebase : <a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialité Firebase</a></p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">🌐</span> Aucune connexion Internet requise</h2>
-                <p>L'application fonctionne entièrement hors ligne. Aucune donnée n'est transmise sur Internet pendant l'utilisation de l'application.</p>
+                <h2><span class="icon">👤</span> Vos droits (RGPD)</h2>
+                <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+                <ul>
+                    <li><strong>Droit d'accès :</strong> consulter les données collectées (limitées car anonymes)</li>
+                    <li><strong>Droit de suppression :</strong> demander la suppression de vos données</li>
+                    <li><strong>Droit d'opposition :</strong> vous opposer au traitement des données</li>
+                    <li><strong>Droit à la portabilité :</strong> recevoir vos données dans un format structuré</li>
+                </ul>
+                <p>Pour exercer ces droits, contactez-nous à l'adresse indiquée ci-dessous.</p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">👤</span> Vos droits</h2>
-                <p>Puisque nous ne collectons aucune donnée vous concernant, il n'y a aucune donnée à consulter, modifier ou supprimer de nos systèmes.</p>
-                <p>Vous gardez le contrôle total de vos données locales et pouvez les supprimer à tout moment en désinstallant l'application.</p>
+                <h2><span class="icon">🌐</span> Connexion Internet</h2>
+                <p>Une connexion Internet peut être nécessaire pour transmettre les données analytiques à Firebase. L'application fonctionne hors ligne mais les statistiques ne seront envoyées que lorsqu'une connexion est disponible.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🔐</span> Sécurité</h2>
+                <p>Nous mettons en œuvre des mesures de sécurité appropriées pour protéger les données collectées. Firebase utilise le chiffrement pour sécuriser la transmission des données.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">👶</span> Protection des mineurs</h2>
+                <p>Notre application ne cible pas délibérément les enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles d'enfants.</p>
             </div>
 
             <div class="section">
                 <h2><span class="icon">📅</span> Modifications de cette politique</h2>
-                <p>Si nos pratiques changent à l'avenir, nous mettrons à jour cette politique de confidentialité. La version actuelle est datée d'octobre 2025.</p>
+                <p>Nous pouvons mettre à jour cette politique de confidentialité. Toute modification sera publiée sur cette page avec une nouvelle date de mise à jour.</p>
             </div>
 
             <div class="section">
                 <h2><span class="icon">✉️</span> Contact</h2>
-                <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter :</p>
+                <p>Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits :</p>
                 <div class="contact-box">
-                    <p><a href="mailto:darts.games.help@gmail.com">darts.games.help@gmail.com</a></p>
+                    <p><strong>Email :</strong> <a href="mailto:darts.games.help@gmail.com">darts.games.help@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -299,57 +347,92 @@
         <!-- English Version -->
         <div id="en" class="content">
             <div class="section">
-                <h2><span class="icon">🛡️</span> Your Privacy is Respected</h2>
+                <h2><span class="icon">🛡️</span> Your Privacy Matters</h2>
                 <div class="highlight-box">
-                    <p>✨ We collect NO personal data. We don't track your activity. We don't share anything with third parties.</p>
+                    <p>✨ We only collect anonymous data to improve the app. No personally identifiable information is collected.</p>
                 </div>
-                <p>This privacy policy describes how the <strong>Darts Games</strong> app handles (or rather, doesn't handle) your personal information.</p>
+                <p>This privacy policy describes how the <strong>Darts Games</strong> app handles your information.</p>
+                <p><strong>Last updated:</strong> October 2025</p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">🚫</span> No Data Collection</h2>
-                <p><strong>Darts Games</strong> does not collect, store, or process any personal information or usage data.</p>
-                <p>We do not collect:</p>
+                <h2><span class="icon">📊</span> Data Collected</h2>
+                <p><strong>Darts Games</strong> uses <strong>Firebase Analytics</strong> to collect anonymous usage data to improve the application.</p>
+                
+                <p><strong>Automatically collected data:</strong></p>
                 <ul>
-                    <li>Name, email address, or phone number</li>
-                    <li>Location or GPS data</li>
-                    <li>Usage statistics or in-app behavior</li>
-                    <li>Device data or identifiers</li>
-                    <li>Cookies or tracking technologies</li>
+                    <li><strong>Usage data:</strong> app interactions, features used, time spent, sessions</li>
+                    <li><strong>Technical data:</strong> device model, operating system version, language, approximate country (based on IP address)</li>
+                    <li><strong>Performance data:</strong> crashes, technical errors</li>
+                    <li><strong>Anonymous identifier:</strong> a unique identifier generated by Firebase (not linked to your identity)</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>Important:</strong> We do NOT collect names, email addresses, phone numbers, precise GPS location, or any other data that could personally identify you.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🎯</span> Purpose of Collection</h2>
+                <p>Data is collected solely to:</p>
+                <ul>
+                    <li>Understand how the app is being used</li>
+                    <li>Improve features and user experience</li>
+                    <li>Identify and fix technical bugs</li>
+                    <li>Optimize app performance</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2><span class="icon">📱</span> Local Storage Only</h2>
-                <p>All game data (scores, settings, preferences) is stored locally on your device. This data never leaves your device and is not synced with external servers.</p>
+                <h2><span class="icon">📱</span> Data Storage</h2>
+                <p><strong>Local data:</strong> Your scores, settings, and game preferences are stored locally on your device and are never transmitted to our servers.</p>
+                <p><strong>Analytics data:</strong> Anonymous usage data is securely transmitted to Google Firebase servers and retained according to Firebase settings (typically 2 months).</p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">🔒</span> No Data Sharing</h2>
-                <p>Since we don't collect any data, we have nothing to share with third parties, advertisers, or partners.</p>
+                <h2><span class="icon">🔒</span> Data Sharing</h2>
+                <p><strong>Google Firebase:</strong> Anonymous data is processed by Google Firebase Analytics in accordance with their privacy policy.</p>
+                <p><strong>No third parties:</strong> We do not sell or share your data with advertisers or other third parties.</p>
+                <p>Learn more about Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">🌐</span> No Internet Connection Required</h2>
-                <p>The app works entirely offline. No data is transmitted over the Internet while using the app.</p>
+                <h2><span class="icon">👤</span> Your Rights (GDPR)</h2>
+                <p>In accordance with GDPR, you have the following rights:</p>
+                <ul>
+                    <li><strong>Right of access:</strong> view collected data (limited as data is anonymous)</li>
+                    <li><strong>Right to deletion:</strong> request deletion of your data</li>
+                    <li><strong>Right to object:</strong> object to data processing</li>
+                    <li><strong>Right to portability:</strong> receive your data in a structured format</li>
+                </ul>
+                <p>To exercise these rights, contact us at the address provided below.</p>
             </div>
 
             <div class="section">
-                <h2><span class="icon">👤</span> Your Rights</h2>
-                <p>Since we don't collect any data about you, there is no data to view, modify, or delete from our systems.</p>
-                <p>You maintain full control of your local data and can delete it at any time by uninstalling the app.</p>
+                <h2><span class="icon">🌐</span> Internet Connection</h2>
+                <p>An Internet connection may be required to transmit analytics data to Firebase. The app works offline, but statistics will only be sent when a connection is available.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🔐</span> Security</h2>
+                <p>We implement appropriate security measures to protect collected data. Firebase uses encryption to secure data transmission.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">👶</span> Children's Privacy</h2>
+                <p>Our app does not deliberately target children under 13. We do not knowingly collect personal data from children.</p>
             </div>
 
             <div class="section">
                 <h2><span class="icon">📅</span> Changes to This Policy</h2>
-                <p>If our practices change in the future, we will update this privacy policy. The current version is dated October 2025.</p>
+                <p>We may update this privacy policy. Any changes will be published on this page with a new update date.</p>
             </div>
 
             <div class="section">
                 <h2><span class="icon">✉️</span> Contact</h2>
-                <p>For any questions regarding this privacy policy, you can contact us:</p>
+                <p>For any questions regarding this privacy policy or to exercise your rights:</p>
                 <div class="contact-box">
-                    <p><a href="mailto:darts.games.help@gmail.com">darts.games.help@gmail.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:darts.games.help@gmail.com">darts.games.help@gmail.com</a></p>
                 </div>
             </div>
         </div>
